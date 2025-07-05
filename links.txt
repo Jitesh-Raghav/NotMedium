@@ -1,0 +1,270 @@
+Companies
+# companies
+8th Light https://8thlight.com/blog/
+A companies
+AdRoll http://tech.adroll.com/blog/
+Advanced Web Machinery https://advancedweb.hu/
+Airbnb https://medium.com/airbnb-engineering
+Algolia https://blog.algolia.com/
+Appnexus https://techblog.appnexus.com/
+Arkency http://blog.arkency.com/
+Artsy http://artsy.github.io/
+Asana https://blog.asana.com/category/eng/
+Atlassian https://developer.atlassian.com/blog/
+Atomic Object https://spin.atomicobject.com/
+Auth0 https://auth0.com/blog/
+Avenue Code http://blog.avenuecode.com/
+AWS https://aws.amazon.com/blogs/aws/
+B companies
+Babbel https://bytes.babbel.com/en/
+Badoo https://techblog.badoo.com/
+Bandcamp https://bandcamptech.wordpress.com/
+Base Lab https://lab.getbase.com/category/engineering/
+Bazaarvoice https://blog.developer.bazaarvoice.com/
+BBC https://medium.com/bbc-design-engineering/
+Benchling https://benchling.engineering/
+Bigcommerce http://www.bigeng.io/
+Blender https://code.blender.org/
+Booking.com https://blog.booking.com/
+Brandwatch http://engineering.brandwatch.com/
+C companies
+Canva https://engineering.canva.com
+Capgemini https://capgemini.github.io/
+Cerner http://engineering.cerner.com/
+Clever https://engineering.clever.com/
+Cloudera https://blog.cloudera.com/
+Cloudflare https://blog.cloudflare.com/
+Codelitt https://www.codelitt.com/blog/
+CodeName One http://www.codenameone.com/blog.html
+Codeship https://blog.codeship.com/
+Commercetools https://techblog.commercetools.com/
+Confluent https://www.confluent.io/blog
+Credit Karma https://engineering.creditkarma.com/
+Criteo https://medium.com/criteo-labs
+Crowdfire https://crowdfire.engineering/
+CSC - IT Center For Science - Cloud Team https://cloud.blog.csc.fi/
+Curalate http://engineering.curalate.com/
+D companies
+Databricks https://databricks.com/blog
+Deezer https://deezer.io/
+Deliveroo https://deliveroo.engineering/
+Discord https://blog.discordapp.com/
+Docker https://blog.docker.com/
+DoorDash https://doordash.engineering/blog/
+Drivy https://drivy.engineering/
+Dropbox https://blogs.dropbox.com/tech/
+E companies
+Ebay https://www.ebayinc.com/stories/blogs/tech/
+eFounders https://medium.com/unexpected-token
+Engine Yard https://blog.engineyard.com/
+Entelo https://sourcecode.entelo.com/
+Envato https://webuild.envato.com/
+Envoy https://envoy.engineering/
+Erlang Solutions https://www.erlang-solutions.com/blog.html
+Eventbrite https://www.eventbrite.com/engineering/
+Evil Martians https://evilmartians.com/chronicles/
+Expedia https://medium.com/expedia-group-tech
+F companies
+Facebook https://code.facebook.com/posts/
+Facebook AI Research https://engineering.fb.com/category/ai-research/
+Feedzai https://medium.com/feedzaitech
+Findmypast http://tech.findmypast.com/
+Finn.no http://tech.finn.no/
+Flickr http://code.flickr.net/
+Freeletics https://freeletics.engineering/
+Fynd http://gofynd.io/blog
+G companies
+Galois https://galois.com/blog/
+GameChanger http://tech.gc.com/
+GIPHY https://engineering.giphy.com/
+GitHub https://githubengineering.com/
+GitHub Old https://github.com/blog/category/engineering
+GoCardless https://gocardless.com/blog/tagged/engineering/
+GoDaddy https://godaddy.github.io/engineering/
+GoSquared https://engineering.gosquared.com/
+Grab http://engineering.grab.com/
+Graphcool https://blog.graph.cool/
+Grofers https://lambda.grofers.com/
+Groupon https://engineering.groupon.com/
+Guardian https://www.theguardian.com/info/developer-blog
+Gusto http://engineering.gusto.com/
+H companies
+HackerEarth http://engineering.hackerearth.com/
+Haptik https://haptik.ai/tech/
+Harry's http://engineering.harrys.com/
+Hashnode https://engineering.hashnode.com/
+Hashrocket https://hashrocket.com/blog
+Helpshift https://medium.com/helpshift-engineering/
+Heroku https://blog.heroku.com/engineering
+HomeAway https://tech.homeaway.com/
+Honeybadger http://blog.honeybadger.io/
+Hootsuite http://code.hootsuite.com/
+Hostinger https://www.hostinger.com/blog/engineering/
+Housing.com https://medium.com/engineering-housing
+HubSpot http://product.hubspot.com/blog/topic/engineering
+I companies
+IBM developerWorks https://developer.ibm.com/dwblog/
+IMVU https://engineering.imvu.com/
+Imgur https://blog.imgur.com/category/eng/
+Indeed http://engineering.indeedblog.com/blog/
+Instacart https://tech.instacart.com/
+Instagram https://engineering.instagram.com/
+J companies
+Jane Street https://blogs.janestreet.com/category/ocaml/
+Jobandtalent https://jobandtalent.engineering/
+JobTeaser https://medium.com/jobteaser-dev-team/
+Just Eat https://tech.just-eat.com/
+K companies
+Khan Academy http://engineering.khanacademy.org
+Kinvolk https://kinvolk.io/blog/
+Kogan.com https://devblog.kogan.com/
+Kolosek https://kolosek.com/blog/
+L companies
+LINE https://engineering.linecorp.com/en/blog
+LinkedIn https://engineering.linkedin.com/blog
+LiveRamp https://liveramp.com/engineering/
+Localytics http://eng.localytics.com/
+Lyft https://eng.lyft.com/
+M companies
+Made Tech https://www.madetech.com/blog
+MapTiler https://www.maptiler.com/blog/
+Medallia http://engineering.medallia.com/blog/
+Medium https://medium.com/medium-eng
+Mesosphere https://mesosphere.com/blog/
+Microsoft Python Engineering https://blogs.msdn.microsoft.com/pythonengineering/
+Moove-it https://blog.moove-it.com/
+Mozilla Automation Team https://planet.mozilla.org/ateam/
+Mozilla Hacks https://hacks.mozilla.org/
+Mozilla Release Engineering https://planet.mozilla.org/releng/
+N companies
+Netflix https://medium.com/netflix-techblog
+New York Times https://open.blogs.nytimes.com
+Nextdoor https://engblog.nextdoor.com/
+Nordic APIs https://nordicapis.com/blog/
+Novoda https://www.novoda.com/blog/
+NPR Apps http://blog.apps.npr.org/
+Nvidia https://blogs.nvidia.com/
+O companies
+OCTO Technology https://blog.octo.com/en/
+Okta https://developer.okta.com/blog/
+OLX https://tech.olx.com/
+OmniTI https://omniti.com/seeds/stop-collaborate-and-listen-notify
+OpenDNS https://engineering.opendns.com/
+Oursky https://code.oursky.com/
+P companies
+Palantir https://blog.palantir.com/
+Panorama Education http://engineering.panoramaed.com/
+Paperless Post https://www.paperlesspost.com/blog/teams/tech/
+Paypal https://www.paypal-engineering.com/
+PicCollage https://tech.pic-collage.com/
+Pinterest https://medium.com/@Pinterest_Engineering
+Pluralsight https://www.pluralsight.com/guides
+Postman https://medium.com/better-practices
+Postmark https://postmarkapp.com/blog
+Prezi https://medium.com/prezi-engineering
+Prolific Interactive http://blog.prolificinteractive.com/category/development/
+PubNub: https://www.pubnub.com/blog/
+PullReview http://blog.8thcolor.com/
+Q companies
+Quora https://engineering.quora.com/
+R companies
+REA Group https://www.rea-group.com/category/tech/
+Remind http://engineering.remind.com/
+RetailMeNot https://medium.com/retailmenot-engineering/
+Riot Games https://engineering.riotgames.com/
+RisingStack https://blog.risingstack.com/
+Robert Elder Software http://blog.robertelder.org/
+RoseHosting https://www.rosehosting.com/blog/
+S companies
+Schibsted Tech Polska http://www.schibsted.pl/blog/
+Segment https://segment.com/blog/categories/engineering/
+Sensible http://blog.sensible.io/
+Serverless https://serverless.com/blog/
+Sharethis https://www.sharethis.com/category/engineering/
+Shopify https://shopify.engineering/
+Simple https://www.simple.com/engineering
+SitePoint https://sitepoint.com
+Sky Betting & Gaming http://engineering.skybettingandgaming.com/
+Skyscanner http://codevoyagers.com/
+Slack https://slack.engineering/
+SlideShare https://engineering.linkedin.com/blog/topic/slideshare
+Small Improvements https://tech.small-improvements.com/
+Soshace https://blog.soshace.com/en/
+Soundcloud https://developers.soundcloud.com/blog/
+SourceClear https://blog.sourceclear.com/
+Speedledger http://engineering.speedledger.com/
+Spotify https://labs.spotify.com/
+Sqreen https://blog.sqreen.io/
+Square https://corner.squareup.com/
+Squarespace https://engineering.squarespace.com/
+Stack Overflow https://stackoverflow.blog/engineering/
+Stackshare https://stackshare.io/feed
+Stitch Fix http://multithreaded.stitchfix.com/blog/
+Strava https://medium.com/strava-engineering/
+Stripe https://stripe.com/blog
+SurveyMonkey https://engineering.surveymonkey.com/
+Swiggy https://bytes.swiggy.com/
+T companies
+Takipi http://blog.takipi.com/
+Target https://target.github.io/
+Teamwork https://engineroom.teamwork.com/
+theScore http://techblog.thescore.com/
+Thoughtbot https://robots.thoughtbot.com/
+Thumbtack https://www.thumbtack.com/engineering/
+Timescale https://blog.timescale.com/
+Tinder https://tech.gotinder.com/
+Toptal https://www.toptal.com/blog/
+Transferwise http://tech.transferwise.com/
+Trivago http://tech.trivago.com/
+TrueCar https://www.drivenbycode.com/
+Tumblr https://engineering.tumblr.com/
+Twilio https://www.twilio.com/blog/
+U companies
+Universe https://engineering.universe.com
+UpGrad https://engineering.upgrad.com
+V companies
+Vena Solutions https://engineering.vena.io/
+VersionEye https://blog.versioneye.com/
+Viget https://www.viget.com/articles/category/code#articles
+Vinted http://engineering.vinted.com/
+VNGRS http://blog.vngrs.com/
+VTS https://buildingvts.com/
+W companies
+Wayfair http://engineering.wayfair.com/
+Wealthfront http://eng.wealthfront.com/
+Wemake.services https://medium.com/wemake-services
+Wingify http://engineering.wingify.com/
+WyeWorks https://wyeworks.com/blog/
+X companies
+XING https://tech.xing.com/
+Y companies
+Yahoo https://yahooeng.tumblr.com/
+Yammer https://medium.com/yammer-engineering
+Z companies
+Zalando https://tech.zalando.com/blog/
+Zapier https://zapier.com/engineering/
+Zendesk https://medium.com/zendesk-engineering
+Zendesk(old) https://developer.zendesk.com/blog
+
+
+Zomato	https://blog.zomato.com/ (formerly active, currently merged with main blog)
+Swiggy	https://bytes.swiggy.com/
+Flipkart	https://tech.flipkart.com/
+Ola Cabs	https://engineering.olacabs.com/
+Paytm	https://paytm.com/blog/
+Razorpay	https://razorpay.com/blog/engineering/
+CRED	https://engineering.cred.club/
+Meesho	https://tech.meesho.com/
+Unacademy	https://medium.com/unacademy-engineering
+Groww	https://groww.in/blog (some tech content mixed in)
+InMobi	https://www.inmobi.com/blog/
+Clear (ClearTax)	https://cleartax.in/s/engineering
+BrowserStack	https://www.browserstack.com/blog/
+Bounce	https://medium.com/bounceapp
+ShareChat	https://engineering.sharechat.com/
+NoBroker	https://medium.com/nobroker-tech
+Dunzo	https://medium.com/dunzo-it
+Udaan	https://medium.com/udaan-engineering
+Instamojo	https://medium.com/instamojo-tech
+Chingari	https://medium.com/chingari-tech
+Yellow.ai	https://yellow.ai/blog/
