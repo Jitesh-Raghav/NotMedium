@@ -248,7 +248,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <p className="text-slate-600 mb-3 text-lg">
-              Built with <span className="text-red-500">❤️</span> for the engineering community
+              Built with <span className="text-red-500">❤️</span> for the engineering community by Jitesh.
             </p>
             <p className="text-slate-500 text-sm">
               Found a broken link or want to add your company?{' '}
