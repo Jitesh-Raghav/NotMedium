@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import AlphabetNav from '@/components/AlphabetNav';
 import CompanyCard from '@/components/CompanyCard';
 import SuggestionForm from '@/components/SuggestionForm';
+import Pagination from '@/components/Pagination';
 import { parseCompaniesFromText, groupCompaniesByLetter, searchCompanies } from '@/lib/parseCompanies';
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(20); // 20 companies per page
 
   // Load companies data
   useEffect(() => {
@@ -50,6 +53,13 @@ export default function Home() {
     return filtered;
   }, [companies, searchTerm, selectedLetter]);
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredCompanies.length / itemsPerPage);
+  const paginatedCompanies = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return filteredCompanies.slice(startIndex, startIndex + itemsPerPage);
+  }, [filteredCompanies, currentPage, itemsPerPage]);
+
   // Group companies by letter for navigation
   const groupedCompanies = useMemo(() => {
     return groupCompaniesByLetter(companies);
@@ -66,6 +76,7 @@ export default function Home() {
 
   const handleSearch = (term) => {
     setSearchTerm(term);
+    setCurrentPage(1); // Reset to first page when searching
     if (term) {
       setSelectedLetter(null); // Clear letter filter when searching
     }
@@ -74,6 +85,13 @@ export default function Home() {
   const handleLetterSelect = (letter) => {
     setSelectedLetter(letter);
     setSearchTerm(''); // Clear search when selecting letter
+    setCurrentPage(1); // Reset to first page when filtering
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // Scroll to top of results when page changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   if (isLoading) {
@@ -204,11 +222,22 @@ export default function Home() {
 
         {/* Companies Grid */}
         {filteredCompanies.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
-            {filteredCompanies.map((company, index) => (
-              <CompanyCard key={`${company.name}-${index}`} company={company} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+              {paginatedCompanies.map((company, index) => (
+                <CompanyCard key={`${company.name}-${index}`} company={company} />
+              ))}
+            </div>
+            
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+              itemsPerPage={itemsPerPage}
+              totalItems={filteredCompanies.length}
+            />
+          </>
         ) : (
           <div className="text-center py-20">
             <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-slate-100 flex items-center justify-center">
