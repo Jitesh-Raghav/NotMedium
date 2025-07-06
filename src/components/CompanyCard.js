@@ -22,7 +22,7 @@ export default function CompanyCard({ company }) {
   return (
     <div 
       onClick={() => openInNewTab(company.url)}
-      className="glass-effect rounded-2xl cursor-pointer border border-slate-200 hover:border-slate-300 transition-all duration-300 hover:scale-105 hover:shadow-hover group"
+      className="glass-card rounded-2xl cursor-pointer hover:border-gray-400 transition-all duration-300 hover:scale-105 hover:shadow-hover group"
     >
       <div className="p-6 flex flex-col items-center text-center h-full">
         <div className="relative w-16 h-16 mb-4 flex items-center justify-center">

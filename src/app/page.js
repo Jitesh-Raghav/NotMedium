@@ -95,24 +95,24 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <header className="sticky top-0 z-40 glass-effect border-b border-slate-200/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           {/* Title Section */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="text-center mb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
               <Image
                 src="/medium-logo.png"
                 alt="Medium Logo"
-                width={60}
-                height={60}
-                className="h-12 w-auto object-contain"
+                width={50}
+                height={50}
+                className="h-10 w-auto object-contain"
                 priority
               />
-              <h1 className="text-4xl md:text-5xl font-serif tracking-tight text-slate-800">
+              <h1 className="text-3xl md:text-4xl font-serif tracking-tight text-slate-800">
                 <span className="font-md text-blue-500">Not</span>
                 <span className="font-normal">Medium</span>
               </h1>
             </div>
-            <p className="text-slate-600 text-xl font-medium mb-3">
+            <p className="text-slate-600 text-lg font-medium mb-2">
               Discover engineering blogs from world's top companies
             </p>
             <div className="flex items-center justify-center gap-3 text-slate-500 text-sm">
@@ -125,8 +125,15 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Search and Action Section */}
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between max-w-5xl mx-auto">
+         
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+       {/* Search and Action Section */}
+       <div className="flex flex-col lg:flex-row gap-6 items-center justify-between max-w-5xl mx-auto mb-6">
             <div className="flex-1 w-full lg:max-w-2xl">
               <SearchBar onSearch={handleSearch} />
             </div>
@@ -142,11 +149,6 @@ export default function Home() {
               </span>
             </button>
           </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Alphabet Navigation */}
         {!searchTerm && (
           <div className="mb-12">
