@@ -80,7 +80,7 @@ export default function AlphabetNav({ selectedLetter, onLetterSelect, companyCou
       {/* Navigation hint */}
       <div className="mt-6 text-center">
         <p className="text-slate-500 text-sm">
-          Click any letter to filter companies • Numbers and symbols are grouped in "#"
+          Click any letter to filter companies • Numbers and symbols are grouped in &quot;#&quot;
         </p>
       </div>
     </div>

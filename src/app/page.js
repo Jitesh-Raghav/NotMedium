@@ -131,7 +131,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="text-slate-600 text-lg font-medium mb-2">
-              Discover engineering blogs from world's top companies
+              Discover engineering blogs from world&apos;s top companies
             </p>
             <div className="flex items-center justify-center gap-3 text-slate-500 text-sm">
               <span className="flex items-center gap-2">
@@ -169,7 +169,7 @@ export default function Home() {
           </div>
         {/* Alphabet Navigation */}
         {!searchTerm && (
-          <div className="mb-12">
+          <div className="mb-12 hidden xl:flex lg:flex">
             <AlphabetNav
               selectedLetter={selectedLetter}
               onLetterSelect={handleLetterSelect}
@@ -184,7 +184,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold text-slate-800 mb-1">
-                  Search results for "{searchTerm}"
+                  Search results for &quot;{searchTerm}&quot;
                 </h2>
                 <p className="text-slate-500">{filteredCompanies.length} companies found</p>
               </div>
@@ -199,7 +199,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold text-slate-800 mb-1">
-                  Companies starting with "{selectedLetter}"
+                  Companies starting with &quot;{selectedLetter}&quot;
                 </h2>
                 <p className="text-slate-500">{filteredCompanies.length} companies</p>
               </div>
@@ -223,7 +223,7 @@ export default function Home() {
         {/* Companies Grid */}
         {filteredCompanies.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
               {paginatedCompanies.map((company, index) => (
                 <CompanyCard key={`${company.name}-${index}`} company={company} />
               ))}
@@ -258,9 +258,9 @@ export default function Home() {
             <h3 className="text-xl font-semibold text-slate-700 mb-3">No companies found</h3>
             <p className="text-slate-500 mb-8 max-w-md mx-auto">
               {searchTerm 
-                ? `No companies match "${searchTerm}". Try a different search term or browse by category.`
+                ? `No companies match &quot;${searchTerm}&quot;. Try a different search term or browse by category.`
                 : selectedLetter
-                ? `No companies found starting with "${selectedLetter}". Try selecting a different letter.`
+                ? `No companies found starting with &quot;${selectedLetter}&quot;. Try selecting a different letter.`
                 : 'No companies available at the moment.'
               }
             </p>

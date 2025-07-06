@@ -102,7 +102,7 @@ export default function SuggestionForm({ isOpen, onClose }) {
               </div>
               <h3 className="text-xl font-bold text-slate-800 mb-3">Thank you!</h3>
               <p className="text-slate-600 mb-2">Your suggestion has been sent successfully!</p>
-              <p className="text-slate-500 text-sm">We'll review it and add the company soon.</p>
+              <p className="text-slate-500 text-sm">We&apos;ll review it and add the company soon.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
@@ -164,7 +164,7 @@ export default function SuggestionForm({ isOpen, onClose }) {
                     placeholder="your@email.com"
                   />
                   <p className="text-xs text-slate-500 mt-2">
-                    We'll notify you when your suggestion is added
+                    We&apos;ll notify you when your suggestion is added
                   </p>
                 </div>
               </div>
