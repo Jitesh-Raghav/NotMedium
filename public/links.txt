@@ -1,4 +1,4 @@
-
+Companies
 # companies
 8th Light https://8thlight.com/blog/
 A companies
@@ -247,7 +247,8 @@ Zendesk https://medium.com/zendesk-engineering
 Zendesk(old) https://developer.zendesk.com/blog
 
 
-Zomato	https://blog.zomato.com/ 
+## Indian Tech
+Zomato	https://blog.zomato.com/
 Swiggy	https://bytes.swiggy.com/
 Flipkart	https://tech.flipkart.com/
 Ola Cabs	https://engineering.olacabs.com/
@@ -256,7 +257,7 @@ Razorpay	https://razorpay.com/blog/engineering/
 CRED	https://engineering.cred.club/
 Meesho	https://tech.meesho.com/
 Unacademy	https://medium.com/unacademy-engineering
-Groww	https://groww.in/blog (some tech content mixed in)
+Groww	https://groww.in/blog
 InMobi	https://www.inmobi.com/blog/
 Clear (ClearTax)	https://cleartax.in/s/engineering
 BrowserStack	https://www.browserstack.com/blog/
@@ -268,3 +269,92 @@ Udaan	https://medium.com/udaan-engineering
 Instamojo	https://medium.com/instamojo-tech
 Chingari	https://medium.com/chingari-tech
 Yellow.ai	https://yellow.ai/blog/
+Zepto	https://blog.zeptonow.com/
+PhonePe	https://www.phonepe.com/blog/
+Juspay	https://juspay.io/blog
+Dream11	https://tech.dream11.in/
+MPL	https://engineering.mpl.live/
+Navi	https://navi.com/blog/
+Acko	https://www.acko.com/blog/
+
+## AI & Machine Learning
+Anthropic                https://www.anthropic.com/engineering
+OpenAI                   https://openai.com/news/
+Google DeepMind          https://deepmind.google/discover/blog/
+Mistral AI               https://mistral.ai/news/
+Perplexity               https://www.perplexity.ai/hub
+Cohere                   https://cohere.com/blog
+Hugging Face             https://huggingface.co/blog
+Scale AI                 https://scale.com/blog
+Weights & Biases         https://wandb.ai/site/articles
+Runway                   https://runwayml.com/research/
+Character.AI             https://blog.character.ai/
+ElevenLabs               https://elevenlabs.io/blog
+Replit                   https://blog.replit.com/
+Cursor                   https://cursor.com/blog
+Lovable                  https://lovable.dev/blog
+
+## Developer Tools & Cloud
+Vercel                   https://vercel.com/blog
+Netlify                  https://www.netlify.com/blog/
+Render                   https://render.com/blog
+Fly.io                   https://fly.io/blog/
+PlanetScale              https://planetscale.com/blog
+Supabase                 https://supabase.com/blog
+Neon                     https://neon.tech/blog
+CockroachDB              https://www.cockroachlabs.com/blog/
+ClickHouse               https://clickhouse.com/blog
+Temporal                 https://temporal.io/blog
+Snowflake                https://www.snowflake.com/blog/
+Redis                    https://redis.io/blog/
+MongoDB                  https://www.mongodb.com/blog
+Elastic                  https://www.elastic.co/blog
+Grafana Labs             https://grafana.com/blog/
+HashiCorp                https://www.hashicorp.com/blog
+JetBrains                https://blog.jetbrains.com/
+Sentry                   https://blog.sentry.io/
+Datadog                  https://www.datadoghq.com/blog/
+LaunchDarkly             https://launchdarkly.com/blog/
+PostHog                  https://posthog.com/blog
+Convex                   https://stack.convex.dev/
+Clerk                    https://clerk.com/blog
+Resend                   https://resend.com/blog
+Railway                  https://blog.railway.com/
+CodeSandbox              https://codesandbox.io/blog
+Prisma                   https://www.prisma.io/blog
+Linear                   https://linear.app/blog
+Notion                   https://www.notion.so/blog
+Figma                    https://www.figma.com/blog/
+Airtable                 https://blog.airtable.com/
+
+## Fintech & Enterprise
+Canary Technologies      https://canary.engineering/
+Mercury                  https://mercury.com/blog
+Brex                     https://www.brex.com/blog
+Ramp                     https://ramp.com/blog
+Rippling                 https://www.rippling.com/blog
+Retool                   https://retool.com/blog
+Plaid                    https://plaid.com/blog/
+Wise                     https://wise.com/blog
+Adyen                    https://www.adyen.com/knowledge-hub
+Coinbase                 https://www.coinbase.com/blog
+Robinhood                https://robinhood.engineering/
+Klarna                   https://engineering.klarna.com/
+Amazon Science           https://www.amazon.science/blog
+Amazon AWS Builders      https://builder.aws.com/
+Mercado Libre            https://medium.com/mercadolibre-tech
+Etsy                     https://www.etsy.com/codeascraft
+Faire                    https://craft.faire.com/
+
+## Mobility, Data & Research
+Waymo                    https://waymo.com/blog/
+Cruise                   https://getcruise.com/news/
+Tesla AI                 https://www.tesla.com/AI
+Nuro                     https://www.nuro.ai/blog
+Figure AI                https://www.figure.ai/news
+Pinecone                 https://www.pinecone.io/blog/
+Weaviate                 https://weaviate.io/blog
+Qdrant                   https://qdrant.tech/blog/
+Milvus                   https://milvus.io/blog
+MotherDuck               https://motherduck.com/blog
+DuckDB                   https://duckdb.org/news/

@@ -1,4 +1,17 @@
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const display = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'NotMedium - Engineering Blogs Directory',
@@ -25,15 +38,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <head>
         <link rel="icon" href="/medium-logo.ico" sizes="any" />
         <link rel="shortcut icon" href="/medium-logo.ico" />
         <link rel="apple-touch-icon" href="/medium-logo.ico" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-sans">
         {children}
       </body>
     </html>
   )
-} 
+}

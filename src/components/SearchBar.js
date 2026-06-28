@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function SearchBar({ onSearch, placeholder = "Search companies..." }) {
+export default function SearchBar({ onSearch, placeholder = 'Search companies, categories, or domains...' }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (value) => {
@@ -16,19 +16,22 @@ export default function SearchBar({ onSearch, placeholder = "Search companies...
   };
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
-      <div className="relative group">
+    <div className="relative w-full">
+      <div className="group relative">
+        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-sky-500/10 opacity-0 blur-xl transition-opacity duration-300 group-focus-within:opacity-100" />
+
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => handleSearch(e.target.value)}
           placeholder={placeholder}
-          className="w-full px-6 py-4 pl-14 pr-12 text-slate-800 placeholder-slate-500 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 text-lg shadow-modern hover:shadow-hover group-hover:border-slate-400"
+          className="relative w-full rounded-2xl border border-slate-200/80 bg-white/95 py-4 pl-14 pr-12 text-base text-slate-800 shadow-card placeholder:text-slate-400 transition-all duration-300 focus:border-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/10"
         />
+
         <div className="absolute inset-y-0 left-0 flex items-center pl-5">
           <svg
-            className={`w-6 h-6 transition-colors duration-300 ${
-              searchTerm ? 'text-blue-500' : 'text-slate-400 group-hover:text-slate-500'
+            className={`h-5 w-5 transition-colors duration-300 ${
+              searchTerm ? 'text-indigo-500' : 'text-slate-400'
             }`}
             fill="none"
             stroke="currentColor"
@@ -42,36 +45,21 @@ export default function SearchBar({ onSearch, placeholder = "Search companies...
             />
           </svg>
         </div>
+
         {searchTerm && (
           <button
             onClick={clearSearch}
-            className="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 hover:text-slate-600 transition-colors duration-200 group"
+            className="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 transition-colors duration-200 hover:text-slate-700"
+            aria-label="Clear search"
           >
-            <div className="p-1 rounded-full hover:bg-slate-100 transition-colors">
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+            <span className="rounded-full p-1.5 transition-colors hover:bg-slate-100">
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </div>
+            </span>
           </button>
         )}
       </div>
-      
-      {/* Search hint */}
-      {/* <div className="absolute top-full mt-2 left-0 right-0 py-3">
-        <p className="text-slate-500 text-sm text-center">
-          Try searching for "Google", "Netflix", "Meta" or any company name
-        </p>
-      </div> */}
     </div>
   );
-} 
+}

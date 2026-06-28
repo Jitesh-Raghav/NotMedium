@@ -8,7 +8,7 @@ export default function SuggestionForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     companyName: '',
     blogUrl: '',
-    submitterEmail: ''
+    submitterEmail: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -16,11 +16,10 @@ export default function SuggestionForm({ isOpen, onClose }) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    // Clear error when user starts typing
     if (error) setError('');
   };
 
@@ -28,9 +27,8 @@ export default function SuggestionForm({ isOpen, onClose }) {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
-    
+
     try {
-      // Prepare email template parameters
       const templateParams = {
         company_name: formData.companyName,
         blog_url: formData.blogUrl,
@@ -40,12 +38,11 @@ export default function SuggestionForm({ isOpen, onClose }) {
           month: 'long',
           day: 'numeric',
           hour: '2-digit',
-          minute: '2-digit'
+          minute: '2-digit',
         }),
-        to_email: emailConfig.targetEmail
+        to_email: emailConfig.targetEmail,
       };
 
-      // Send email using EmailJS
       const response = await emailjs.send(
         emailConfig.serviceId,
         emailConfig.templateId,
@@ -56,18 +53,16 @@ export default function SuggestionForm({ isOpen, onClose }) {
       console.log('Email sent successfully:', response);
       setIsSubmitting(false);
       setIsSuccess(true);
-      
-      // Reset form after success
+
       setTimeout(() => {
         setFormData({
           companyName: '',
           blogUrl: '',
-          submitterEmail: ''
+          submitterEmail: '',
         });
         setIsSuccess(false);
         onClose();
       }, 3000);
-      
     } catch (emailError) {
       console.error('Failed to send email:', emailError);
       setIsSubmitting(false);
@@ -78,49 +73,56 @@ export default function SuggestionForm({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="glass-effect rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto border border-slate-300">
-        <div className="p-8">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold text-slate-800">Suggest a Company</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-md">
+      <div className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-3xl border border-white/60 bg-white/95 shadow-2xl backdrop-blur-xl">
+        <div className="border-b border-slate-200/80 px-8 pb-6 pt-8">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-indigo-500">Contribute</p>
+              <h2 className="font-display text-2xl font-bold text-slate-900">Suggest a company</h2>
+              <p className="mt-1 text-sm text-slate-500">Help us grow the directory with your favorite engineering blog.</p>
+            </div>
             <button
               onClick={onClose}
-              className="text-slate-400 hover:text-slate-600 transition-colors duration-200 p-2 rounded-lg hover:bg-slate-100"
+              className="rounded-xl p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700"
+              aria-label="Close modal"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
+        </div>
 
+        <div className="px-8 py-8">
           {isSuccess ? (
-            <div className="text-center py-12">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="py-8 text-center">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-emerald-50">
+                <svg className="h-10 w-10 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">Thank you!</h3>
-              <p className="text-slate-600 mb-2">Your suggestion has been sent successfully!</p>
-              <p className="text-slate-500 text-sm">We&apos;ll review it and add the company soon.</p>
+              <h3 className="font-display text-xl font-bold text-slate-900">Thank you!</h3>
+              <p className="mt-2 text-slate-600">Your suggestion was sent successfully.</p>
+              <p className="mt-1 text-sm text-slate-500">We&apos;ll review it and add the company soon.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
               {error && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4">
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p className="text-red-700 text-sm font-medium">{error}</p>
+                    <p className="text-sm font-medium text-red-700">{error}</p>
                   </div>
                 </div>
               )}
-              
-              <div className="space-y-6">
+
+              <div className="space-y-5">
                 <div>
-                  <label htmlFor="companyName" className="block text-sm font-semibold text-slate-700 mb-3">
-                    Company Name *
+                  <label htmlFor="companyName" className="mb-2 block text-sm font-semibold text-slate-700">
+                    Company name *
                   </label>
                   <input
                     type="text"
@@ -129,14 +131,14 @@ export default function SuggestionForm({ isOpen, onClose }) {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
+                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-800 placeholder:text-slate-400 transition-all focus:border-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/10"
                     placeholder="e.g., Acme Corp"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="blogUrl" className="block text-sm font-semibold text-slate-700 mb-3">
-                    Engineering Blog URL *
+                  <label htmlFor="blogUrl" className="mb-2 block text-sm font-semibold text-slate-700">
+                    Engineering blog URL *
                   </label>
                   <input
                     type="url"
@@ -145,14 +147,14 @@ export default function SuggestionForm({ isOpen, onClose }) {
                     value={formData.blogUrl}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
+                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-800 placeholder:text-slate-400 transition-all focus:border-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/10"
                     placeholder="https://engineering.company.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="submitterEmail" className="block text-sm font-semibold text-slate-700 mb-3">
-                    Your Email (optional)
+                  <label htmlFor="submitterEmail" className="mb-2 block text-sm font-semibold text-slate-700">
+                    Your email (optional)
                   </label>
                   <input
                     type="email"
@@ -160,35 +162,33 @@ export default function SuggestionForm({ isOpen, onClose }) {
                     name="submitterEmail"
                     value={formData.submitterEmail}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
+                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-800 placeholder:text-slate-400 transition-all focus:border-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-500/10"
                     placeholder="your@email.com"
                   />
-                  <p className="text-xs text-slate-500 mt-2">
-                    We&apos;ll notify you when your suggestion is added
-                  </p>
+                  <p className="mt-2 text-xs text-slate-500">We&apos;ll notify you when your suggestion is added.</p>
                 </div>
               </div>
 
-              <div className="flex gap-4 mt-8">
+              <div className="mt-8 flex gap-3">
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 px-6 py-3 border border-slate-300 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 font-semibold"
+                  className="flex-1 rounded-xl border border-slate-200 px-5 py-3 font-semibold text-slate-700 transition-all hover:bg-slate-50"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 px-6 py-3 gradient-accent text-white rounded-xl hover:shadow-hover transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                  className="flex-1 rounded-xl px-5 py-3 font-semibold text-white gradient-accent shadow-hover transition-all disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
                       Sending...
                     </span>
                   ) : (
-                    'Submit Suggestion'
+                    'Submit suggestion'
                   )}
                 </button>
               </div>
@@ -198,4 +198,4 @@ export default function SuggestionForm({ isOpen, onClose }) {
       </div>
     </div>
   );
-} 
+}
