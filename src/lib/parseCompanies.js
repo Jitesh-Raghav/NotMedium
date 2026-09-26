@@ -199,6 +199,7 @@ export function searchCompanies(companies, searchTerm) {
   return companies.filter(
     (company) =>
       company.name.toLowerCase().includes(term) ||
-      company.category.toLowerCase().includes(term)
+      company.category.toLowerCase().includes(term) ||
+      company.url.toLowerCase().includes(term)
   );
 }

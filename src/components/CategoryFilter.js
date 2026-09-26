@@ -1,55 +1,63 @@
 'use client';
 
-export default function CategoryFilter({ categories, selectedCategory, onCategorySelect }) {
-  if (!categories.length) {
-    return null;
-  }
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+export default function CategoryFilter({ categories, selectedCategory, onCategorySelect, total }) {
+  const scrollerRef = useRef(null);
+  const [edges, setEdges] = useState({ left: false, right: false });
+
+  // Fade whichever edge still has tabs hidden behind it.
+  const updateEdges = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    setEdges({
+      left: el.scrollLeft > 4,
+      right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4,
+    });
+  }, []);
+
+  useEffect(() => {
+    updateEdges();
+    window.addEventListener('resize', updateEdges);
+    return () => window.removeEventListener('resize', updateEdges);
+  }, [updateEdges, categories.length]);
+
+  if (!categories.length) return null;
+
+  const items = [{ name: null, label: 'All', count: total }, ...categories.map((c) => ({ ...c, label: c.name }))];
+  const mask = `linear-gradient(to right, ${edges.left ? 'transparent' : '#000'}, #000 ${
+    edges.left ? '40px' : '0px'
+  }, #000 calc(100% - ${edges.right ? '56px' : '0px'}), ${edges.right ? 'transparent' : '#000'})`;
 
   return (
-    <section className="mb-8 animate-fade-up-delay">
-      <div className="mb-4 flex items-center justify-between gap-4">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-indigo-500">Explore</p>
-          <h2 className="font-display text-lg font-semibold text-slate-900">Browse by category</h2>
-        </div>
-        {selectedCategory && (
+    <div
+      ref={scrollerRef}
+      onScroll={updateEdges}
+      style={{ maskImage: mask, WebkitMaskImage: mask }}
+      className="no-scrollbar -mx-5 flex gap-1 overflow-x-auto px-5 sm:mx-0 sm:px-0"
+      role="tablist"
+      aria-label="Collections"
+    >
+      {items.map(({ name, label, count }) => {
+        const active = selectedCategory === name;
+        return (
           <button
-            onClick={() => onCategorySelect(null)}
-            className="text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-700"
-          >
-            Clear filter
-          </button>
-        )}
-      </div>
-
-      <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <button
-          onClick={() => onCategorySelect(null)}
-          className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
-            selectedCategory === null
-              ? 'chip-active text-white'
-              : 'border border-slate-200 bg-white text-slate-700 hover:border-indigo-200 hover:bg-indigo-50/60'
-          }`}
-        >
-          All categories
-        </button>
-        {categories.map(({ name, count }) => (
-          <button
-            key={name}
-            onClick={() => onCategorySelect(name)}
-            className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
-              selectedCategory === name
-                ? 'chip-active text-white'
-                : 'border border-slate-200 bg-white text-slate-700 hover:border-indigo-200 hover:bg-indigo-50/60'
+            key={label}
+            role="tab"
+            aria-selected={active}
+            onClick={(e) => {
+              onCategorySelect(name);
+              e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }}
+            className={`inline-flex h-9 shrink-0 items-center gap-2 rounded-full px-3.5 text-[13px] transition-all duration-300 ${
+              active ? 'bg-fg text-bg' : 'text-muted hover:bg-line/50 hover:text-fg'
             }`}
           >
-            {name}
-            <span className={`ml-1.5 ${selectedCategory === name ? 'text-indigo-100' : 'text-slate-400'}`}>
-              {count}
-            </span>
+            {label}
+            <span className={`font-mono text-[10.5px] ${active ? 'text-bg/60' : 'text-subtle'}`}>{count}</span>
           </button>
-        ))}
-      </div>
-    </section>
+        );
+      })}
+    </div>
   );
 }

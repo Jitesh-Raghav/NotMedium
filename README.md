@@ -8,7 +8,9 @@ A curated directory of engineering blogs from top companies worldwide, organized
 - 🔍 **Smart Search**: Find companies quickly with real-time search
 - 🔤 **Alphabetical Navigation**: Browse companies by letter with visual counters
 - 📱 **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- 🎨 **Modern UI**: Clean, intuitive interface with company logos
+- 🎨 **Editorial UI**: Minimal, typography-led design with dark and light themes
+- ⌘ **Command palette**: Press `⌘K` / `Ctrl+K` to jump to any blog, `/` to filter the index
+- 🗂️ **Collections & views**: Browse curated collections and switch between grid and list views
 - ➕ **Community Driven**: Users can suggest new companies to add
 - 🔗 **Direct Links**: Click any company card to visit their blog
 - 📧 **Email Notifications**: Receive emails when users suggest new companies
